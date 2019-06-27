@@ -196,7 +196,7 @@ Mongo.Collection.prototype.attachSchema = function c2AttachSchema(ss, options) {
         this,
         methodName,
         args,
-        Meteor.isServer || this._connection === null, // getAutoValues
+        true, // Meteor.isServer || this._connection === null, // getAutoValues
         userId,
         Meteor.isServer // isFromTrustedCode
       );
